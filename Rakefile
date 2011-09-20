@@ -16,10 +16,10 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "isms_http"
   gem.homepage = "http://github.com/cparedes/isms_http"
-  gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "christian.paredes@sbri.org"
+  gem.license = "Apache 2.0"
+  gem.summary = %Q{An API wrapper for MultiTech iSMS devices}
+  gem.description = %Q{An API wrapper for MultiTech iSMS devices - smooths over weird HTTP API}
+  gem.email = "cp@redbluemagenta.com"
   gem.authors = ["Christian Paredes"]
   # dependencies defined in Gemfile
 end
