@@ -1,6 +1,37 @@
 = isms_http
 
-Description goes here.
+isms_http provides an easy way to query for messages in a MultiTech iSMS modem,
+as well as providing a way to send messages through the iSMS system.  The iSMS
+HTTP API is not RESTful and can be a bit weird here and there, which this
+library is designed to smooth over.
+
+The full HTTP API documentation provided by MultiTech can be found here:
+
+http://www.multitech.net/developer/
+
+== Prerequisites
+
+httparty 0.8.0 must be installed.
+
+== Usage
+
+Let's say we want to send a message and query it's status immediately after
+sending it:
+
+  require 'rubygems'
+  require 'isms_http'
+
+  isms = ISMS.new("http://isms.example.com:81", "user", "password")
+  response = isms.send_message("8002324000", "hi thar\nit's me")
+
+  # response is now a hash containing the key "id" with the associated
+  # SMS ID sent back from the iSMS device.
+
+  puts isms.query_message_status(response['id'])
+
+== TODO
+
+- Haven't yet implemented a wrapper around the Receive API.
 
 == Contributing to isms_http
  
