@@ -9,6 +9,10 @@ The full HTTP API documentation provided by MultiTech can be found here:
 
 http://www.multitech.net/developer/
 
+== License
+
+Apache 2.0.
+
 == Prerequisites
 
 httparty 0.8.0 must be installed.
