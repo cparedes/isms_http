@@ -31,7 +31,7 @@ module ISMS
         msgpart = URI.escape(msg[offset, 160])
         offset += 160
         split_message = self.class.get("/sendmsg?user=#{@auth[:username]}&passwd=#{@auth[:password]}&cat=#{category}&to=#{recipient}&text=#{msgpart}")
-        message_stack << split_message
+        message_stack << split_message["id"]
       end
       message_stack
     end

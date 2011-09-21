@@ -65,7 +65,7 @@ module ISMS
       # { "id" => 9, "status" => 5 }
       # if there was an error, 
       # { "id" => 9, "error" => 604 }
-      id = msg.match(/ID: ([0-9]+)/)[1]
+      id = msg.match(/ID: ([0-9]+)/)[1].to_i
       if msg =~ /Err/
         err_num = error_parse(msg)
         err_msg = @@error_codes[err_num]
