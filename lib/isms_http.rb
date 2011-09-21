@@ -3,6 +3,7 @@ require 'httparty'
 require 'isms_http/exceptions'
 require 'isms_http/parser'
 
+# Main module for ISMS library.
 module ISMS
   class HTTP
     attr_reader :url

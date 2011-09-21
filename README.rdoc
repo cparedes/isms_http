@@ -25,7 +25,7 @@ sending it:
   require 'rubygems'
   require 'isms_http'
 
-  isms = ISMS.new("http://isms.example.com:81", "user", "password")
+  isms = ISMS::HTTP.new("http://isms.example.com:81", "user", "password")
   response = isms.send_message("8002324000", "hi thar\nit's me")
 
   # response is now a hash containing the key "id" with the associated
