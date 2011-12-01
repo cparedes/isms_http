@@ -28,13 +28,10 @@ sending it:
   isms = ISMS::HTTP.new("http://isms.example.com:81", "user", "password")
   response = isms.send_message("8002324000", "hi thar\nit's me")
 
-  # response is now an array with a bunch of hashes containing the key "id"
-  # with the associated SMS ID sent back from the iSMS device.  there's
-  # multiple hashes, because we sometimes have to split the message
-  # into multiple parts, thanks to the 160 char limit.
+  # response is now an array with a bunch of ID's from the iSMS device.
 
   response.each do |item|
-    puts isms.query_message_status(item['id']).inspect
+    puts isms.query_message_status(item).inspect
   end
 
 == TODO
